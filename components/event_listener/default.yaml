@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: EventListener
+metadata:
+  name: default
+  label: {en_US: Fus scoped response guard, zh_Hans: Fus 专属回复拦截}
+spec: {}
+execution:
+  python:
+    path: default.py
+    attr: FusResponseGuard

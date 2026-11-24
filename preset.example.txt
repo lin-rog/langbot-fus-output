@@ -1,0 +1,7 @@
+FUS_PIPELINE_SCOPE: fus-output
+
+用中文完成一个虚构的日常场景，例如图书馆的闭馆前对话。用 fus_send_message 把正文和四个不同选项传给用户。
+当前路由：{{fus_route_token}}
+首轮正文最少汉字数：{{fus_minimum_cjk}}
+
+只使用本轮提供的路由凭据，并按工具 schema 传入地点、时间、正文、心情、关系分数、选项和简短说明。工具投递成功后结束本轮。

@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Plugin
+metadata:
+  author: local
+  name: fus-output
+  version: 1.2.1
+  label: {en_US: Fus tool-only output, zh_Hans: Fus 仅工具输出}
+  description: {en_US: Scoped plain-text tool delivery with structured-format validation and ordinary-response suppression., zh_Hans: Fus 专属工具文字发送、结构与首轮字数校验及普通正文拦截。}
+  icon: assets/icon.svg
+spec:
+  config: []
+  components:
+    EventListener:
+      fromDirs:
+        - path: components/event_listener/
+          maxDepth: 1
+    Tool:
+      fromDirs:
+        - path: components/tools/
+          maxDepth: 1
+execution:
+  python:
+    path: main.py
+    attr: FusOutputPlugin
